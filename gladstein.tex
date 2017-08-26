@@ -1,0 +1,24 @@
+%!TEX root = main.tex
+\begin{frame}[fragile]
+    \begin{minted}[fontsize=\scriptsize]{python}
+      class Gladstein(Player):
+
+            def __init__(self):
+              self.patsy = True
+
+            def strategy(self, opponent)n:
+              if not self.history:
+                  return D
+
+              if self.patsy:
+                  if opponent.history[-1] == D:
+                      self.patsy = False
+                      return C
+                  cooperation_ratio = self.cooperations / len(self.history)
+                  if cooperation_ratio > 0.5:
+                      return D
+                  return C
+              else:
+                  return opponent.history[-1]
+    \end{minted}
+\end{frame}

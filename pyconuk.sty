@@ -1,0 +1,31 @@
+\ProvidesPackage{pyconuk}
+\beamertemplatenavigationsymbolsempty
+\setbeamertemplate{footline}[frame number]
+\usepackage{lmodern}
+\usepackage{fontspec}
+\usepackage{fontawesome}
+\setsansfont{Gill Sans}
+\newfontfamily\HumorSans[Ligatures=TeX]{Gill Sans}
+\newfontfamily\Times{Times}
+\setbeamerfont{itemize/enumerate body}{size=\Large}
+\usepackage{pdfcomment}
+    \newcommand{\speakernote}[1]{\marginnote{\pdfcomment[icon=note]{#1}}}
+\usepackage{tikz}
+    \usetikzlibrary{shapes.geometric, arrows, fit, trees, calc,patterns, positioning, trees}
+\usepackage[beamer]{hf-tikz}
+\usepackage{minted}
+\setmonofont{Consolas}
+\usepackage{subcaption}
+
+
+\newcommand{\blankscreen}[1]{
+  \bgroup
+    \begin{frame}{}
+      \addtocounter{framenumber}{-1}
+      \begin{center}
+        \includegraphics[scale=0.5]{images/pyconuk}
+      \end{center}
+      \speakernote{#1}
+    \end{frame}
+    \egroup
+}
